@@ -111,6 +111,15 @@ export default function ProjectsAndMore() {
                     <p className="text-sm text-zinc-500">Successfully scaled digital solutions within 18 months.</p>
                   </div>
                 </div>
+                <div className="p-4 rounded-xl border border-zinc-800 bg-zinc-950 flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+                    <Play className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-zinc-100">AI Strategy Expert</h4>
+                    <p className="text-sm text-zinc-500">Expert in utilizing generative AI for creative workflows, video production, and automated copywriting.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -122,7 +131,7 @@ export default function ProjectsAndMore() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-6xl font-bold mb-8">Ready to Scale?</h2>
           <p className="text-xl text-zinc-400 mb-12 max-w-2xl mx-auto">
-            Let's collaborate on your next technical masterpiece. Reach out for digital growth, automation, or full-stack development.
+            Let&apos;s collaborate on your next technical masterpiece. Reach out for digital growth, automation, or full-stack development.
           </p>
           <div className="flex flex-col items-center gap-6">
             <Link
@@ -132,11 +141,27 @@ export default function ProjectsAndMore() {
               adityaz190zz@gmail.com
               <ExternalLink className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Link>
+            <Link
+              href="tel:+919044761170"
+              className="text-xl font-medium text-zinc-400 hover:text-white transition-colors"
+            >
+              +91 90447 61170
+            </Link>
             <div className="flex gap-8 mt-4">
-              <Link href="https://github.com/AdityaS-appco" target="_blank" className="text-zinc-400 hover:text-white transition-colors">
+              <Link
+                href="https://github.com/AdityaS-appco"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 hover:text-white transition-colors"
+              >
                 <Github className="w-8 h-8" />
               </Link>
-              <Link href="https://linkedin.com/in/aditya-singh-524a04360" target="_blank" className="text-zinc-400 hover:text-white transition-colors">
+              <Link
+                href="https://linkedin.com/in/aditya-singh-524a04360"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 hover:text-white transition-colors"
+              >
                 <Linkedin className="w-8 h-8" />
               </Link>
             </div>

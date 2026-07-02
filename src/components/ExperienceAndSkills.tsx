@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
