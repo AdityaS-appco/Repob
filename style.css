@@ -121,6 +121,17 @@ body {
 }
 
 /* --- Navigation --- */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(to right, var(--accent), var(--accent-secondary));
+    z-index: 2000;
+    transition: width 0.1s ease-out;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -193,6 +204,26 @@ nav {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.nav-links a.active::after {
+    width: 100%;
 }
 
 .nav-links a:hover {
