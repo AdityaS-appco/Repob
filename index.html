@@ -3,285 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Singh | Technical Masterpiece</title>
+    <title>Aditya Singh | Digital Growth Architect</title>
+    <meta name="description" content="Portfolio of Aditya Singh - Digital Growth & Automation Engineer. Building high-performance digital ecosystems.">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for high-end look -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div id="custom-cursor"></div>
-    <div id="cursor-follower"></div>
+    <!-- Background Elements -->
+    <div class="bg-orchestra">
+        <div class="blob" style="top: 10%; left: 10%;"></div>
+        <div class="blob" style="bottom: 10%; right: 10%; animation-delay: -10s;"></div>
+    </div>
 
-    <nav id="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">Aditya Singh</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-            </div>
+    <!-- Custom Cursor -->
+    <div class="cursor-p"></div>
+    <div class="cursor-f"></div>
+
+    <nav>
+        <a href="#" class="nav-brand">ADITYA <span>/ENGINEER</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="status-indicator">
+            <span class="status-dot"></span>
+            Available for Projects
         </div>
-        <div class="scroll-progress"></div>
     </nav>
 
     <main>
         <!-- Hero Section -->
         <section id="about" class="hero">
-            <div class="bg-grid"></div>
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h1 class="reveal">Technical <br><span class="gradient-text">Masterpiece</span></h1>
-                    <p class="reveal delay-1">Digital Growth & Automation Engineer. Specializing in high-performance digital ecosystems, social media automation, and full-stack solutions.</p>
-                    <div class="hero-btns reveal delay-2">
-                        <a href="#contact" class="btn primary">Work with me</a>
-                        <div class="social-links">
-                            <a href="https://github.com/AdityaS-appco" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                            </a>
-                            <a href="https://linkedin.com/in/aditya-singh-524a04360" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                            </a>
-                        </div>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-tag">DIGITAL GROWTH ARCHITECT</div>
+                    <h1 class="hero-title reveal">
+                        <span>Building</span>
+                        <span class="highlight">Technical</span>
+                        Masterpieces.
+                    </h1>
+                    <p class="hero-desc reveal">
+                        Specializing in high-performance digital ecosystems, advanced social automation, and full-stack solutions that drive exponential growth.
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="#contact" class="btn-cta">
+                            Start a Project
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="hero-visual reveal">
-                    <div class="image-wrapper">
-                        <img src="profile.png" alt="Aditya Singh">
-                        <div class="floating-badge top-right">950k+ Realtime Views</div>
-                        <div class="floating-badge bottom-left">80% Automation Efficiency</div>
+                    <div class="profile-frame">
+                        <div class="profile-img-container">
+                            <img src="profile.png" alt="Aditya Singh Profile">
+                        </div>
+                        <div class="floating-badge top-right">
+                            <i data-lucide="zap"></i>
+                            <span>950k+ Views</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">Professional Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3>Digital Growth & Content Strategist</h3>
-                                    <p class="company">Atrangii / Ullu OTT Platforms</p>
-                                </div>
-                                <div class="timeline-meta">
-                                    <span>2026 - Present</span>
-                                    <span>Mumbai, India</span>
-                                </div>
-                            </div>
-                            <ul class="timeline-list">
-                                <li>Oversaw the 'Woh Wali Film' community (1.74M+ subscribers), achieving peak realtime velocity of 950,000+ views per 48 hours.</li>
-                                <li>Orchestrated content strategies for Atrangii Tamil, resulting in a 517% increase in watch time.</li>
-                                <li>Leveraged recommendation engines for Atrangii Telugu, securing 260k+ views in under 30 days.</li>
-                            </ul>
-                        </div>
-                    </div>
+        <section id="experience">
+            <div class="section-header reveal">
+                <span class="section-num">01/</span>
+                <h2 class="section-title">Selected Experience</h2>
+                <p class="section-sub">A timeline of scaling digital products and automating growth.</p>
+            </div>
 
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3>Social Media Automation & Growth Engineer</h3>
-                                    <p class="company">Hari Om OTT Platform</p>
-                                </div>
-                                <div class="timeline-meta">
-                                    <span>2026</span>
-                                    <span>Remote</span>
-                                </div>
-                            </div>
-                            <ul class="timeline-list">
-                                <li>Developed custom web applications to automate complex spreadsheet management, reducing manual overhead by 80%.</li>
-                                <li>Analyzed content performance data to execute high-retention strategies, maximizing engagement rates to over 500%.</li>
-                                <li>Architected specialized proxy networks to scale social operations.</li>
-                            </ul>
-                        </div>
+            <div class="exp-list">
+                <div class="exp-card reveal">
+                    <div class="exp-year">2026 — PRESENT</div>
+                    <div class="exp-content">
+                        <h3>Digital Growth & Content Strategist</h3>
+                        <span class="exp-company">Atrangii / Ullu OTT Platforms</span>
+                        <ul class="exp-details">
+                            <li>Scaled 'Woh Wali Film' community to 1.74M+ subscribers.</li>
+                            <li>Achieved peak realtime velocity of 950,000+ views per 48 hours.</li>
+                            <li>Increased watch time by 517% for regional OTT expansions.</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3>SMM & SEO Specialist</h3>
-                                    <p class="company">GAO.Tek Inc.</p>
-                                </div>
-                                <div class="timeline-meta">
-                                    <span>2025</span>
-                                    <span>Remote</span>
-                                </div>
-                            </div>
-                            <ul class="timeline-list">
-                                <li>Leveraged Apollo.io to design and execute high-conversion email marketing campaigns.</li>
-                                <li>Managed backlink building and keyword optimization using MS Teams for global coordination.</li>
-                            </ul>
-                        </div>
+                <div class="exp-card reveal">
+                    <div class="exp-year">2026</div>
+                    <div class="exp-content">
+                        <h3>Social Media Automation Engineer</h3>
+                        <span class="exp-company">Hari Om OTT Platform</span>
+                        <ul class="exp-details">
+                            <li>Automated complex spreadsheet workflows, reducing manual work by 80%.</li>
+                            <li>Maximized engagement rates to over 500% through data-driven retention.</li>
+                            <li>Architected specialized proxy networks for large-scale operations.</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3>Independent Digital Solutions Provider</h3>
-                                    <p class="company">Freelancer.com</p>
-                                </div>
-                                <div class="timeline-meta">
-                                    <span>2023 - 2024</span>
-                                    <span>Global</span>
-                                </div>
-                            </div>
-                            <ul class="timeline-list">
-                                <li>Delivered 2+ years of gigs specializing in HTML/CSS landing pages and digital handle management.</li>
-                                <li>Runner-Up in an International Freelancer Content Writing Competition.</li>
-                            </ul>
-                        </div>
+                <div class="exp-card reveal">
+                    <div class="exp-year">2025</div>
+                    <div class="exp-content">
+                        <h3>SMM & SEO Specialist</h3>
+                        <span class="exp-company">GAO.Tek Inc.</span>
+                        <ul class="exp-details">
+                            <li>Executed high-conversion email marketing via Apollo.io.</li>
+                            <li>Managed global SEO operations and keyword optimization.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="section alt-bg">
-            <div class="container">
-                <h2 class="section-title reveal">Featured Masterpieces</h2>
-                <div class="project-grid">
-                    <div class="project-card reveal">
-                        <div class="project-overlay"></div>
-                        <div class="project-info">
-                            <h3>Rivava Ecosystem</h3>
-                            <p>Engineered a 360-degree digital infrastructure including a Live Website, custom Internal CRM, and an official Play Store application for a fintech brand.</p>
-                            <div class="tags">
-                                <span>Full-stack</span>
-                                <span>CRM</span>
-                                <span>Mobile App</span>
-                            </div>
-                            <a href="https://rivava.in" target="_blank" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                            </a>
-                        </div>
-                    </div>
+        <section id="projects">
+            <div class="section-header reveal">
+                <span class="section-num">02/</span>
+                <h2 class="section-title">Digital Ecosystems</h2>
+                <p class="section-sub">Engineered infrastructures for fintech and OTT scale.</p>
+            </div>
 
-                    <div class="project-card reveal">
-                        <div class="project-overlay"></div>
-                        <div class="project-info">
-                            <h3>Community Management</h3>
-                            <p>Lead Community Manager for a creator with 200k+ subscribers. Managed engagement across Discord and YouTube to drive brand loyalty.</p>
-                            <div class="tags">
-                                <span>Discord</span>
-                                <span>Automation</span>
-                                <span>Community</span>
-                            </div>
-                        </div>
+            <div class="project-grid">
+                <div class="proj-card reveal">
+                    <div class="proj-icon"><i data-lucide="layers"></i></div>
+                    <h3 class="proj-title">Rivava Ecosystem</h3>
+                    <p class="proj-desc">A 360° fintech infrastructure including a custom CRM and Play Store application.</p>
+                    <div class="proj-tags">
+                        <span class="proj-tag">FULL-STACK</span>
+                        <span class="proj-tag">CRM</span>
+                        <span class="proj-tag">FINTECH</span>
                     </div>
+                </div>
 
-                    <div class="project-card reveal">
-                        <div class="project-overlay"></div>
-                        <div class="project-info">
-                            <h3>Growth Proxy Network</h3>
-                            <p>Architected specialized proxy networks to scale social operations and audience acquisition pathways for major OTT platforms.</p>
-                            <div class="tags">
-                                <span>Infrastructure</span>
-                                <span>Networking</span>
-                                <span>Scale</span>
-                            </div>
-                        </div>
+                <div class="proj-card reveal">
+                    <div class="proj-icon"><i data-lucide="users"></i></div>
+                    <h3 class="proj-title">Growth Proxy Network</h3>
+                    <p class="proj-desc">Specialized infrastructure for scaling social operations across major OTT platforms.</p>
+                    <div class="proj-tags">
+                        <span class="proj-tag">NETWORKING</span>
+                        <span class="proj-tag">PROXY</span>
+                        <span class="proj-tag">SCALE</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills & Education -->
-        <section id="skills" class="section">
-            <div class="container split-grid">
-                <div>
-                    <h2 class="section-title reveal">Technical Arsenal</h2>
-                    <div class="skill-groups">
-                        <div class="skill-group reveal">
-                            <h4>Coding & Email</h4>
-                            <div class="skill-tags">
-                                <span>HTML5</span><span>CSS3</span><span>Responsive Design</span><span>MJML</span><span>A/B Testing</span>
-                            </div>
-                        </div>
-                        <div class="skill-group reveal">
-                            <h4>Software & Platforms</h4>
-                            <div class="skill-tags">
-                                <span>Salesforce</span><span>Mailchimp</span><span>Apollo.io</span><span>Metricool</span><span>Zapier</span><span>GA4</span>
-                            </div>
-                        </div>
-                        <div class="skill-group reveal">
-                            <h4>Automation & Data</h4>
-                            <div class="skill-tags">
-                                <span>Python</span><span>Sheet Automation</span><span>Advanced Excel</span><span>Performance Analytics</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Technical Arsenal -->
+        <section id="skills">
+            <div class="section-header reveal">
+                <span class="section-num">03/</span>
+                <h2 class="section-title">Arsenal</h2>
+            </div>
 
-                <div>
-                    <h2 class="section-title reveal">Education & Awards</h2>
-                    <div class="edu-card reveal">
-                        <h3>Bachelor of Technology</h3>
-                        <p class="highlight">Computer Science and Engineering</p>
-                        <p class="institution">Dr. A.P.J. Abdul Kalam Technical University</p>
-                        <div class="edu-meta">
-                            <span>2021 - 2025</span>
-                            <span class="badge">CGPA: 7.31/10</span>
-                        </div>
-                    </div>
-                    <div class="awards-list">
-                        <div class="award-item reveal">
-                            <div class="award-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-                            </div>
-                            <div>
-                                <h5>Smart India Hackathon (SIH 2023)</h5>
-                                <p>National-level participant (Top 5%)</p>
-                            </div>
-                        </div>
-                        <div class="award-item reveal">
-                            <div class="award-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                            </div>
-                            <div>
-                                <h5>10+ Live Products Delivered</h5>
-                                <p>Successfully scaled digital solutions globally</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="arsenal-grid reveal">
+                <div class="tech-item">
+                    <i data-lucide="code-2"></i>
+                    <span>Development</span>
+                </div>
+                <div class="tech-item">
+                    <i data-lucide="database"></i>
+                    <span>Automation</span>
+                </div>
+                <div class="tech-item">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </div>
+                <div class="tech-item">
+                    <i data-lucide="cpu"></i>
+                    <span>Infrastructure</span>
+                </div>
+                <div class="tech-item">
+                    <i data-lucide="mail"></i>
+                    <span>Outreach</span>
+                </div>
+                <div class="tech-item">
+                    <i data-lucide="shield-check"></i>
+                    <span>SEO</span>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section footer">
-            <div class="container text-center">
-                <h2 class="hero-title reveal">Ready to Scale?</h2>
-                <p class="reveal">Let's collaborate on your next technical masterpiece.</p>
-                <div class="contact-methods reveal">
-                    <a href="mailto:adityaz190zz@gmail.com" class="email-link">adityaz190zz@gmail.com</a>
-                    <a href="tel:+919044761170" class="phone-link">+91 90447 61170</a>
+        <section id="contact" class="footer">
+            <div class="reveal">
+                <h2 class="hero-title">Let's build <br>something <span>great.</span></h2>
+                <div class="footer-grid">
+                    <div class="footer-info">
+                        <p>Based in Mumbai, India. Working globally.</p>
+                        <div class="email-wrapper">
+                            <a href="mailto:adityaz190zz@gmail.com" class="footer-email" id="email-link">adityaz190zz@gmail.com</a>
+                            <button id="copy-email" class="copy-btn"><i data-lucide="copy"></i></button>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <a href="https://github.com/AdityaS-appco">Github</a>
+                        <a href="https://linkedin.com/in/aditya-singh-524a04360">LinkedIn</a>
+                    </div>
                 </div>
-                <div class="footer-socials reveal">
-                    <a href="https://github.com/AdityaS-appco" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://linkedin.com/in/aditya-singh-524a04360" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://rivava.in" target="_blank" rel="noopener noreferrer">Rivava</a>
-                </div>
-                <p class="copyright">© 2026 Aditya Singh. Crafted with Pure HTML/CSS/JS.</p>
+                <p class="copyright">© 2026 Aditya Singh / Crafted for excellence.</p>
             </div>
         </section>
     </main>
 
     <script src="script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
