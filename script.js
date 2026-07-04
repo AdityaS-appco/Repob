@@ -29,6 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     smoothFollow();
 
+    // 1.5 Magnetic Effect
+    const magneticElements = document.querySelectorAll('.nav-links a, .btn-cta, .copy-btn, .nav-brand');
+    magneticElements.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = `translate(0, 0)`;
+        });
+    });
+
     // Interaction scaling
     const interactives = document.querySelectorAll('a, button, .exp-card, .proj-card, .tech-item');
     interactives.forEach(el => {
@@ -57,16 +72,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Scroll Reveal System
+    // 3. Scroll Reveal & Active Nav System
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
+
+                // Update Nav Link
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                });
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.3 });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    sections.forEach(el => revealObserver.observe(el));
+
+    // 3.5 Scroll Progress Bar
+    const progressBar = document.querySelector('.scroll-progress');
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progressBar.style.width = scrolled + "%";
+    });
 
     // 4. Smooth Scroll for Navigation
     document.querySelectorAll('.nav-links a').forEach(anchor => {
