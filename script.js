@@ -96,6 +96,30 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
     sections.forEach(el => revealObserver.observe(el));
 
+    // 3.2 Mobile Menu Toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navRight = document.querySelector('.nav-links');
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navRight.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            const isMenu = icon.getAttribute('data-lucide') === 'menu';
+            icon.setAttribute('data-lucide', isMenu ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+    }
+
+    // Close mobile menu on link click
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navRight.classList.remove('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.setAttribute('data-lucide', 'menu');
+            lucide.createIcons();
+        });
+    });
+
     // 3.5 Scroll Progress Bar
     const progressBar = document.querySelector('.scroll-progress');
     window.addEventListener('scroll', () => {
@@ -170,6 +194,19 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.style.textShadow = 'none';
         });
     }
+
+    // 7. Reveal Fallback (Ensure visibility if JS/Observer fails)
+    setTimeout(() => {
+        document.querySelectorAll('.reveal').forEach(el => {
+            if (!el.classList.contains('active')) {
+                // Check if element is above the current view scroll
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('active');
+                }
+            }
+        });
+    }, 2000);
 
     console.log("%c ADITYA SINGH // MASTERPIECE ACTIVATED ", "background: #00ffcc; color: #000; font-weight: bold; padding: 5px 10px;");
 });

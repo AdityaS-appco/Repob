@@ -146,6 +146,21 @@ nav {
     border-bottom: 1px solid var(--border-subtle);
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
 .status-indicator {
     display: flex;
     align-items: center;
@@ -465,6 +480,58 @@ section {
     color: var(--accent);
 }
 
+/* --- Education --- */
+.edu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.edu-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 2.5rem;
+    border-radius: 24px;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.edu-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.edu-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.edu-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.edu-inst {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.edu-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
 /* --- Project Showcase --- */
 .project-grid {
     display: grid;
@@ -529,29 +596,41 @@ section {
 /* --- Tech Arsenal --- */
 .arsenal-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
-.tech-item {
+.tech-card {
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
-    padding: 2rem;
-    border-radius: 20px;
-    text-align: center;
+    padding: 2.5rem;
+    border-radius: 24px;
     transition: all 0.3s ease;
 }
 
-.tech-item:hover {
+.tech-card:hover {
     border-color: var(--accent);
-    transform: scale(1.05);
 }
 
-.tech-item i {
-    font-size: 2rem;
+.tech-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-card-header i {
+    width: 24px;
     color: var(--accent);
-    margin-bottom: 1rem;
-    display: block;
+}
+
+.tech-card-header h3 {
+    font-size: 1.25rem;
+}
+
+.tech-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
 }
 
 /* --- Buttons --- */
@@ -588,7 +667,30 @@ section {
     .cursor-p, .cursor-f { display: none; }
     section { padding: 120px 5% 60px; }
     .hero-title { font-size: 3.5rem; }
-    .nav-links { display: none; }
+
+    .mobile-toggle { display: block; }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #050505;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease;
+        border-left: 1px solid var(--border-subtle);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .status-indicator { display: none; }
+    .edu-grid, .project-grid, .arsenal-grid { grid-template-columns: 1fr; }
+    .edu-card { flex-direction: column; text-align: center; }
 }
 
 /* --- Reveal Animations --- */
