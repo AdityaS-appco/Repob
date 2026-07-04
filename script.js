@@ -75,21 +75,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Scroll Reveal & Active Nav System
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-links a');
+    const revealElements = document.querySelectorAll('.reveal');
 
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
 
-                // Update Nav Link
-                const id = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-                });
+                // Update Nav Link if the intersecting element is a section
+                if (entry.target.tagName === 'SECTION') {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.15 }); // Lower threshold for better mobile/small screen trigger
 
+    revealElements.forEach(el => revealObserver.observe(el));
     sections.forEach(el => revealObserver.observe(el));
 
     // 3.5 Scroll Progress Bar
